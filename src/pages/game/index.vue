@@ -23,14 +23,14 @@
 
   .game {
     height: 100vh;
-  }
-  .game-chessboard {
-    height: 50%;
-    &:nth-child(1) {
-      background-color: red
-    }
-    &:nth-child(2) {
-      background-color: blue
+    &-chessboard {
+      height: 50%;
+      &:nth-child(1) {
+        background-color: red
+      }
+      &:nth-child(2) {
+        background-color: blue
+      }
     }
   }
 </style>
