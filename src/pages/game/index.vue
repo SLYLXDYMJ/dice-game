@@ -1,5 +1,5 @@
 <template>
-  <view class="game" style="{ height: innerHeight }">
+  <view class="game">
     <div class="game-chunk">
       <game-chessboard
         ref="game-chessboard-0"
@@ -56,9 +56,6 @@
           this.chessboardData[ 1 ] :
           this.chessboardData[ 0 ]
 
-        // 对比时，需要将第一列和最后一列交换顺序（因为棋盘是相对的）
-        colI = colI === 0 ? 2 : colI === 2 ? 0 : colI
-
         oppositeChessboardData[ colI ] = _.map(oppositeChessboardData[ colI ], _num => {
           return _num === num ? 0 : _num
         })
@@ -108,12 +105,6 @@
     &-chunk {
       height: 50%;
       padding-top: rpx(50);
-      &:nth-child(1) {
-        transform: rotate(180deg);
-      }
-      &:nth-child(2) {
-        transform: rotate(360deg);
-      }
     }
   }
 </style>
